@@ -338,246 +338,61 @@
     <script>
       // 1. Ma'lumotlar bazasi
       const MENU_DATA = [
-        {
-          id: 1,
-          name: "Combo 1",
-          price: "55 000",
-          category: "Kombolar",
-          isPopular: true,
-          image:
-            "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 2,
-          name: "Combo 2",
-          price: "53 000",
-          category: "Kombolar",
-          image:
-            "https://images.unsplash.com/photo-1596450514735-a11c27fd33eb?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 3,
-          name: "Do'stlar Combosi 1",
-          price: "110 000",
-          category: "Kombolar",
-          isPopular: true,
-          image:
-            "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 4,
-          name: "Oilaviy Combo",
-          price: "122 000",
-          category: "Kombolar",
-          image:
-            "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 5,
-          name: "Issiq Combo",
-          price: "40 000",
-          category: "Kombolar",
-          image:
-            "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 6,
-          name: "Burger Combo",
-          price: "47 000",
-          category: "Kombolar",
-          image:
-            "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 7,
-          name: "Burger Combo 2X",
-          price: "80 000",
-          category: "Kombolar",
-          isPopular: true,
-          image:
-            "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 8,
-          name: "Combo Reto",
-          price: "44 000",
-          category: "Kombolar",
-          image:
-            "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 9,
-          name: "Student Combo 1",
-          price: "35 000",
-          category: "Kombolar",
-          image:
-            "https://images.unsplash.com/photo-1596450514735-a11c27fd33eb?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 10,
-          name: "Student Combo 2",
-          price: "57 000",
-          category: "Kombolar",
-          image:
-            "https://images.unsplash.com/photo-1596450514735-a11c27fd33eb?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 11,
-          name: "Bolalar Combosi",
-          price: "35 000",
-          category: "Kombolar",
-          image:
-            "https://images.unsplash.com/photo-1596450514735-a11c27fd33eb?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 12,
-          name: "Combo Pitsa",
-          price: "35 000",
-          category: "Kombolar",
-          image:
-            "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 13,
-          name: "Lavash",
-          price: "32 000",
-          category: "Fast food",
-          isPopular: true,
-          image:
-            "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 14,
-          name: "Cheeseburger",
-          price: "28 000",
-          category: "Fast food",
-          image:
-            "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 15,
-          name: "Hot-dog",
-          price: "22 000",
-          category: "Fast food",
-          image:
-            "https://images.unsplash.com/photo-1612392062631-94dd858cba88?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 16,
-          name: "Kartoshka fri",
-          price: "18 000",
-          category: "Fast food",
-          image:
-            "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 17,
-          name: "Vafli Klassik",
-          price: "35 000",
-          category: "Vaflilar",
-          image:
-            "https://images.unsplash.com/photo-1562376552-0d160a2f9fa4?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 18,
-          name: "Banan Vafli",
-          price: "45 000",
-          category: "Vaflilar",
-          image:
-            "https://images.unsplash.com/photo-1562376552-0d160a2f9fa4?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 19,
-          name: "Qulupnay Vafli",
-          price: "55 000",
-          category: "Vaflilar",
-          isPopular: true,
-          image:
-            "https://images.unsplash.com/photo-1562376552-0d160a2f9fa4?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 20,
-          name: "Banan Qulupnay Vafli",
-          price: "50 000",
-          category: "Vaflilar",
-          image:
-            "https://images.unsplash.com/photo-1562376552-0d160a2f9fa4?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 21,
-          name: "Moxito Klassik",
-          price: "15 000",
-          category: "Ichimliklar",
-          image:
-            "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 22,
-          name: "Moxito Anor",
-          price: "15 000",
-          category: "Ichimliklar",
-          image:
-            "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 23,
-          name: "Moxito Qulupnay",
-          price: "15 000",
-          category: "Ichimliklar",
-          isPopular: true,
-          image:
-            "https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 24,
-          name: "Moxito Tarxun",
-          price: "15 000",
-          category: "Ichimliklar",
-          image:
-            "https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 25,
-          name: "Vanilli Muzqaymoq",
-          price: "12 000",
-          category: "Muzqaymoq",
-          image:
-            "https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 26,
-          name: "Shokoladli Muzqaymoq",
-          price: "14 000",
-          category: "Muzqaymoq",
-          isPopular: true,
-          image:
-            "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 27,
-          name: "Qulupnayli Muzqaymoq",
-          price: "14 000",
-          category: "Muzqaymoq",
-          image:
-            "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?q=80&w=500&auto=format&fit=crop",
-        },
-        {
-          id: 28,
-          name: "Miks Muzqaymoq",
-          price: "18 000",
-          category: "Muzqaymoq",
-          image:
-            "https://images.unsplash.com/photo-1488900128323-21503983a07e?q=80&w=500&auto=format&fit=crop",
-        },
+        { id: 1, name: "Kombo 1", price: "53 000 - 57 000", category: "Kombolar", isPopular: true, image: "img/combo 1.jpg" },
+        { id: 2, name: "Kombo 2", price: "52 000 - 56 000", category: "Kombolar", image: "img/combo 2.jpg" },
+        { id: 3, name: "Do'stlar Kombosi", price: "106 000 - 114 000", category: "Kombolar", image: "img/dostlar combosi.PNG" },
+        { id: 4, name: "Oilaviy Kombosi", price: "153 000 - 161 000", category: "Kombolar", isPopular: true, image: "img/oilaviy_kombosi.png" },
+        { id: 5, name: "Issiq Kombo", price: "40 000 - 44 000", category: "Kombolar", image: "img/issiq kombo.PNG" },
+        { id: 6, name: "Burger Kombo", price: "45 000 - 49 000", category: "Kombolar", image: "img/burger combo.png" },
+        { id: 7, name: "Burger Kombo 2", price: "76 000 - 85 000", category: "Kombolar", image: "img/burger kombo 2.png" },
+        { id: 8, name: "Kombo Reto", price: "39 000", category: "Kombolar", image: "img/kombo reto (2).png" },
+        { id: 9, name: "Student Kombo 1", price: "38 000", category: "Kombolar", image: "img/student kombo 1.png" },
+        { id: 10, name: "Student Kombo 2", price: "62 000", category: "Kombolar", image: "img/student_kombo_2.png" },
+        { id: 11, name: "Bolalar Kombosi", price: "35 000", category: "Kombolar", image: "img/bololar combosi.PNG" },
+
+        { id: 12, name: "Lavash Kichik", price: "24 000 - 27 000", category: "Lavash va Shaurma", isPopular: true, image: "img/lavash-tovuq.png" },
+        { id: 13, name: "Lavash Katta", price: "34 000 - 38 000", category: "Lavash va Shaurma", image: "img/lavashmol.jpg" },
+        { id: 14, name: "Lavash Pishloqli", price: "38 000 - 43 000", category: "Lavash va Shaurma", isPopular: true, image: "img/sirlilavash.jpg" },
+        { id: 15, name: "Tandir Lavash", price: "36 000 - 40 000", category: "Lavash va Shaurma", image: "img/tandir_lavash.png" },
+        { id: 16, name: "Lavash Uzun", price: "40 000 - 46 000", category: "Lavash va Shaurma", image: "img/lavash uzun.png" },
+        { id: 17, name: "Shaurma Katta", price: "32 000 - 36 000", category: "Lavash va Shaurma", image: "img/shaurmamol.jpg" },
+        { id: 18, name: "Shaurma Kichik", price: "23 000 - 26 000", category: "Lavash va Shaurma", image: "img/shaurmamol.jpg" },
+
+        { id: 19, name: "Gamburger", price: "30 000", category: "Burger", image: "img/gamburger.png" },
+        { id: 20, name: "Chizburger", price: "35 000", category: "Burger", isPopular: true, image: "img/chizburger.png" },
+        { id: 21, name: "Dabl Burger", price: "45 000", category: "Burger", image: "img/dabl_burger.png" },
+        { id: 22, name: "Dabl Chizburger", price: "54 000", category: "Burger", image: "img/dablchizburger.jpg" },
+        { id: 23, name: "Chickenburger", price: "26 000", category: "Burger", image: "img/tovuq-burger.png" },
+
+        { id: 24, name: "Pita Xot-dog (1 sasiska)", price: "18 000", category: "Xot-dog", image: "img/pita.png" },
+        { id: 25, name: "Pita Xot-dog (2 sasiska)", price: "22 000", category: "Xot-dog", image: "img/pita.png" },
+        { id: 26, name: "Pita Xot-dog (3 sasiska)", price: "26 000", category: "Xot-dog", image: "img/pita.png" },
+        { id: 27, name: "Xot-dog", price: "18 000", category: "Xot-dog", image: "img/xotdog (2).png" },
+        { id: 28, name: "Xot-dog Korolevskiy", price: "27 000", category: "Xot-dog", image: "img/korolevski.png" },
+        { id: 29, name: "Chicken Xot-dog", price: "26 000", category: "Xot-dog", image: "img/chicken_xot_dog.png" },
+
+        { id: 30, name: "Pita", price: "30 000 - 35 000", category: "Pita va Qarsildoqlar", image: "img/pita.png" },
+        { id: 31, name: "Tandir Xaggi", price: "42 000 - 47 000", category: "Pita va Qarsildoqlar", isPopular: true, image: "img/tandir xaggi.png" },
+        { id: 32, name: "Kolumbia", price: "44 000 - 50 000", category: "Pita va Qarsildoqlar", image: "img/kolumbia.png" },
+        { id: 33, name: "Klab Sendvich", price: "45 000", category: "Pita va Qarsildoqlar", image: "img/klab_sendvich.png" },
+        { id: 34, name: "Nagets 4ta", price: "15 000", category: "Pita va Qarsildoqlar", image: "img/nagets.png" },
+        { id: 35, name: "Nagets 8ta", price: "25 000", category: "Pita va Qarsildoqlar", image: "img/nagets.png" },
+        { id: 36, name: "Strips", price: "25 000", category: "Pita va Qarsildoqlar", image: "img/stips.png" },
+        { id: 37, name: "Fri", price: "18 000", category: "Pita va Qarsildoqlar", image: "img/frii.JPG" },
+        { id: 38, name: "Fri Derevenskiy", price: "20 000", category: "Pita va Qarsildoqlar", image: "img/aydaxo.JPG" },
+        { id: 39, name: "Sous", price: "3 000", category: "Pita va Qarsildoqlar", image: "img/sous.png" },
+        { id: 40, name: "Vafli Klassik", price: "35 000", category: "Vaflilar", image: "img/klasik vafli.png" },
+        { id: 41, name: "Banan Vafli", price: "45 000", category: "Vaflilar", image: "img/bananli.png" }
       ];
 
       const CATEGORIES = [
         "Barchasi",
         "Kombolar",
-        "Fast food",
-        "Vaflilar",
-        "Ichimliklar",
-        "Muzqaymoq",
+        "Lavash va Shaurma",
+        "Burger",
+        "Xot-dog",
+        "Pita va Qarsildoqlar",
+        "Vaflilar"
       ];
       let activeCategory = "Barchasi";
 

@@ -371,7 +371,7 @@
         { id: 28, name: "Xot-dog Korolevskiy", price: "27 000", category: "Xot-dog", image: "img/korolevski.png" },
         { id: 29, name: "Chicken Xot-dog", price: "26 000", category: "Xot-dog", image: "img/chicken_xot_dog.png" },
 
-        { id: 30, name: "Pita", price: "30 000 - 35 000", category: "Pita va Qarsildoqlar", image: "img/pita.png" },
+        { id: 30, name: "Pita", price: "🐂35 000   🐔30 000", category: "Pita va Qarsildoqlar", image: "img/pita.png" },
         { id: 31, name: "Tandir Xaggi", price: "42 000 - 47 000", category: "Pita va Qarsildoqlar", isPopular: true, image: "img/tandir xaggi.png" },
         { id: 32, name: "Kolumbia", price: "44 000 - 50 000", category: "Pita va Qarsildoqlar", image: "img/kolumbia.png" },
         { id: 33, name: "Klab Sendvich", price: "45 000", category: "Pita va Qarsildoqlar", image: "img/klab_sendvich.png" },
@@ -432,7 +432,20 @@
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="font-bold text-gray-800 text-sm md:text-lg mb-1 truncate">${item.name}</h3>
+                        ${item.price.includes('-') ? `
+                        <div class="flex flex-col gap-1 text-red-600 font-black text-base md:text-lg">
+                            <div class="flex items-center gap-1.5">
+                                <span class="text-xl" title="Tovuq go'shtidan">🐔</span>
+                                <span>${item.price.split('-')[0].trim()} <span class="text-xs text-gray-500">so'm</span></span>
+                            </div>
+                            <div class="flex items-center gap-1.5">
+                                <span class="text-xl" title="Mol go'shtidan">🐮</span>
+                                <span>${item.price.split('-')[1].trim()} <span class="text-xs text-gray-500">so'm</span></span>
+                            </div>
+                        </div>
+                        ` : `
                         <p class="text-red-600 font-black text-lg md:text-xl">${item.price} <span class="text-xs text-gray-500">so'm</span></p>
+                        `}
                     </div>
                 </div>
             `,
@@ -486,9 +499,22 @@
                             <span class="text-xs font-bold text-green-500 uppercase tracking-widest mb-1 block">${item.category}</span>
                             <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-1 leading-tight group-hover:text-green-600 transition-colors">${item.name}</h3>
                         </div>
-                        <div class="mt-3 flex items-center justify-between">
+                        <div class="mt-3 flex items-end justify-between">
+                            ${item.price.includes('-') ? `
+                            <div class="flex flex-col gap-1.5 font-black text-gray-900 text-lg md:text-xl">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-2xl" title="Tovuq go'shtidan">🐔</span>
+                                    <span>${item.price.split('-')[0].trim()} <span class="text-sm text-gray-500 font-medium">so'm</span></span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-2xl" title="Mol go'shtidan">🐮</span>
+                                    <span>${item.price.split('-')[1].trim()} <span class="text-sm text-gray-500 font-medium">so'm</span></span>
+                                </div>
+                            </div>
+                            ` : `
                             <span class="text-xl md:text-2xl font-black text-gray-900">${item.price} <span class="text-sm text-gray-500 font-medium">so'm</span></span>
-                            <i data-lucide="chevron-right" class="w-6 h-6 text-gray-400 group-hover:text-green-600 transition-colors duration-300"></i>
+                            `}
+                            <i data-lucide="chevron-right" class="w-6 h-6 text-gray-400 group-hover:text-green-600 transition-colors duration-300 mb-1"></i>
                         </div>
                     </div>
                 </div>
